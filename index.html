@@ -4,17 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventnavn</title>
+  <title>Bloomfest | Forside</title>
   <link rel="stylesheet" href="./starter.css">
+  <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="./style.css">
+
 </head>
 
-<body>
+<body class="fade-in">
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./">BloomFest</a>
       <nav class="site-nav">
-        <button>Menu</button>
+        <button popovertarget="menu">Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./" aria-current="page">Forside</a></li>
           <li><a href="./svg.html">Interaktiv SVG</a></li>
@@ -24,7 +26,144 @@
     </div>
   </header>
 
-  <main></main>
+  <main>
+    <section>
+      <div class="hero">
+        <img src="./imgs/slotshave_boder_3.webp" alt="Slotshave med boder til BloomFest">
+        <div class="hero-content">
+          <div id="herobanner">
+            <h1>Bloom Fest</h1>
+          </div>
+          <div class="line"></div>
+          <h2>Danmarks største blomstermesse</h2>
+        </div>
+      </div>
+    </section>
+    <hr class="divider">
+    <section>
+      <div class="grid_02">
+        <h3>En weekend i blomsternes tegn</h3>
+        <p>
+          Oplev blomstermessen i de smukke omgivelser ved Egeskov Slot. Gå på opdagelse blandt farverige blomster,
+          grønne
+          planter
+          og kreativ blomsterkunst. Deltag i inspirerende foredrag og workshops, mød passionerede udstillere, og find
+          blomster,
+          keramik og nye idéer til hjem og have. Her er inspiration for både nysgerrige begyndere og erfarne
+          blomsterentusiaster.</p>
+      </div>
+    </section>
+    <hr class="divider">
+    <section>
+      <div class="grid_03">
+
+        <div class="grid_03-1">
+          <img src="./imgs/slotshave_boder.webp" alt="Billede af blomstermessen">
+          <h3>Oplev vores spændende boder</h3>
+          <p>På messeområdet finder du et bredt udvalg af boder, der dækker alt inden for blomster, planter og tilbehør:
+          </p>
+
+          <button class="button" popovertarget="popup-boder">Læs mere</button>
+
+          <div id="popup-boder" class="min-popup" popover>
+            <img src="./imgs/slotshave_boder_3.webp" alt="Billede af blomstermessen">
+            <div class="popup_indhold">
+              <h3>Oplev vores spændende boder</h3>
+              <p>På messeområdet finder du et bredt udvalg af boder, der dækker alt inden for blomster, planter og
+                tilbehør:
+              </p>
+              <h4>Eksotiske planter og stueplanter</h4>
+              <p>Gå på opdagelse blandt sjældne botaniske skatte, hængeplanter og grønne favoritter til stuen,
+                præsenteret
+                af
+                specialiserede planteskoler.</p>
+              <h4>Bæredygtig brugskunst og keramik</h4>
+              <p>Håndlavede potter, vaser og skjulere i naturmaterialer og genbrugsglas, der fremhæver blomsternes
+                naturlige
+                skønhed.</p>
+              <h4>Værktøj og professionelt udstyr</h4>
+              <p>Knapper, sakse, bindetråd og alt det grej, du skal bruge for at skabe professionelle
+                blomsterdekorationer
+                derhjemme.</p>
+
+              <h4>Friske snitblomster direkte fra avlerne</h4>
+              <p>Køb friske, sæsonaktuelle markblomster og roser med hjem, og skab dine egne unikke buketter.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid_03-2">
+          <img src="./imgs/blomsterkunstkonkurrence_1.webp" alt="Billede af blomsterkunstkonkurrence">
+          <h3>Foredrag og workshops</h3>
+          <p>Bliv klogere på alt fra bæredygtig dyrkning til moderne blomsterkunst ved vores daglige foredrag og
+            hands-on
+            workshops</p>
+
+          <button class="button" popovertarget="popup-foredrag">Læs mere</button>
+
+          <div id="popup-foredrag" class="min-popup" popover>
+            <img src="./imgs/blomsterkunstkonkurrence_3.webp" alt="Blomsterkonkurrence">
+            <div class="popup_indhold">
+              <h3 class="popover_text">Foredrag og workshops</h3>
+              <p>Bliv klogere på alt fra bæredygtig dyrkning til moderne blomsterkunst ved vores daglige foredrag og
+                hands-on
+                workshops:</p>
+              <h4>Foredrag: Fremtidens bæredygtige floristik</h4>
+              <h4>Kl. 11:00 – Store Scene</h4>
+              <p>Hør om, hvordan branchen arbejder med miljøvenlige alternativer, bionedbrydelige materialer og lokalt
+                dyrkede blomster uden brug af skadelige sprøjtemidler.</p>
+
+              <h4>Workshop: Bind din egen sæsonbuket</h4>
+              <h4>Kl. 13:00 – Kreativt Værksted</h4>
+
+              <p>Få gode råd til farvesammensætning, teknik og proportioner, og bind din egen smukke buket under kyndig
+                vejledning af en
+                erfaren florist (tilmelding på dagen).</p>
+
+              <h4>Foredrag: Indretning med grønne planter</h4>
+              <h4>Kl. 15:00 – Scenen i Hal 2</h4>
+              <p>Få eksperttips til, hvordan du skaber det perfekte indeklima og indretter dit hjem med planter, der
+                passer
+                til
+                lysforholdene i netop dit hjem.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid_03-3">
+          <img src="./imgs/blomsterboder_1.webp" alt="Billede af blomsterboder">
+          <h3>Vinsmagning – smag, duft og inspiration</h3>
+          <p>Tag en pause fra messens mange oplevelser, og gå på opdagelse i vinens verden.</p>
+
+          <button class="button" popovertarget="popup-vin">Læs mere</button>
+          <div id="popup-vin" class="min-popup" popover>
+            <img src="./imgs/blomsterboder_3.webp" alt="Billede af blomsterboder">
+            <div class="popup_indhold">
+              <h3>Vinsmagning</h3>
+              <p>Tag en pause fra messens mange oplevelser, og gå på opdagelse i vinens verden. Til vinsmagningen kan du
+                udforske
+                forskellige vine og blive klogere på druernes karakter, vinens aromaer og samspillet mellem smag og
+                duft.
+
+                Uanset om du er nysgerrig nybegynder eller allerede har en favoritdrue, er der inspiration at hente. Få
+                tips
+                til at
+                smage på vin, stil spørgsmål, og opdag nye favoritter i hyggelige omgivelser. En sanselig oplevelse med
+                plads til både
+                fordybelse og gode samtaler.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="divider">
+    <section>
+      <div class="grid_04">
+
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-content">

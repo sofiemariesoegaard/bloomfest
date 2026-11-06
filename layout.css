@@ -1,0 +1,182 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 6px;
+  box-shadow:
+    9px 9px 34px #e3e3e3,
+    -9px -9px 34px #ffffff;
+}
+
+.hero img {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: brightness(1.05) opacity(0.9);
+
+  mask-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.7) 30%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.7) 30%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.hero-content {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding: 3rem 4rem;
+
+  background: linear-gradient(
+    to right,
+    rgba(255, 240, 242, 0.9) 0%,
+    rgba(255, 240, 242, 0.6) 50%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.hero-content h1 {
+  margin: 0;
+}
+
+.hero-content h2 {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #97596e;
+  margin-top: 0.6rem;
+
+  @media (width > 600px) {
+    width: 53%;
+  }
+}
+
+.grid_02 {
+  background-color: #717c5c;
+  height: 23rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow:
+    9px 9px 34px #0000006b,
+    -9px -9px 34px #ffffff;
+
+  h3 {
+    font-weight: bolder;
+  }
+
+  h3,
+  p {
+    max-width: 65ch;
+  }
+
+  @media (width > 600px) {
+    font-size: 1.3rem;
+  }
+}
+
+.grid_03 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media (width > 600px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Samlet regel for de tre kort */
+.grid_03-1,
+.grid_03-2,
+.grid_03-3 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #faede5;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow:
+    9px 9px 34px #e3e3e3,
+    -9px -9px 34px #ffffff;
+
+  h3 {
+    font-size: 1.7rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  button {
+    font-size: 1rem;
+  }
+  img {
+    border-radius: 5px;
+  }
+}
+
+/* Tvinger knapperne ned i bunden af kortene */
+.grid_03-1 .button,
+.grid_03-2 .button,
+.grid_03-3 .button {
+  margin-top: auto;
+}
+
+.button {
+  justify-self: start;
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  margin-block: 0;
+  background: #97596e;
+  color: #faede5;
+  text-decoration: none;
+  font-family: "elsie-black";
+  font-weight: bolder;
+  border-radius: 5px;
+  border: 0;
+  width: 100%;
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.255);
+  transition: 300ms ease-in-out;
+}
+
+.button:hover {
+  background-color: #e1bdc7;
+  color: #97596e;
+}
+
+.grid_04 {
+  background: #717c5c;
+  height: 90vh;
+  border-radius: 6px;
+  box-shadow:
+    9px 9px 34px #0000006b,
+    -9px -9px 34px #ffffff;
+}
