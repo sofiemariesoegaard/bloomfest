@@ -1,18 +1,140 @@
-/* Variabler */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*Farver*/
+:root {
+  /* Neutrale & lyse nuancer */
+  --color-off-white: #f7f7f7; /* Meget lys neutral / Baggrund */
+  --color-warm-cream: #faede5; /* Varm fersken/creme */
+  --color-sage-light: #cbcbb1; /* Lys salvie / Støvet olivengrøn */
+
+  /* Grønne / Jordnære nuancer */
+  --color-sage-deep: #717c5c; /* Dyb salvie / Skovgrøn */
+
+  /* Bær & Rosa nuancer */
+  --color-lavender-soft: #e7dfee; /* Milled syren / Lys lilla */
+  --color-dusty-rose: #e1bdc7; /* Støvet rosa */
+  --color-berry-deep: #97596e; /* Dyb bær / Blommerød */
+}
+
+/* Variabler (ikke klar) */
 html {
   --color-page: #f7f7f7;
-  --color-surface: #fff;
-  --color-text: #222;
-  --color-muted: #666;
-  --color-border: #d8d8d8;
+  --color-surface: #e1bdc7;
+  --color-text1: #97596e;
+  --color-text2: #faede5;
+
+  --color-text: ;
+  --color-muted: ;
+  --color-border: #717c5c;
   --color-brand: #e1bdc7;
   --space-05: 0.5rem;
   --space-1: 1rem;
   --space-2: 2rem;
   --space-3: 3rem;
 
+  --primary: #faede5;
+  --secondary: #717c5c;
+  --accent: #97596e;
+
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 6rem;
+
   background: var(--color-page);
   color: var(--color-text);
+}
+
+/*** Fonts ***/
+/* Link */
+Kavoon {
+  font-family: "Kavoon", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Downlaodede*/
+@font-face {
+  font-family: Bloom;
+  src: url(./fonts/bloom-regular-webfont.woff);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Elsie;
+  src: url(./fonts/elsie-regular-webfont.woff);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Elsie-black;
+  src: url(./fonts/elsie-black-webfont.woff);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* tekst layout*/
+h1 {
+  font-family: Bloom, sans-serif;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+h2 {
+  font-family: Elsie, sans-serif;
+  font-size: 2.5rem;
+  color: #faede5;
+  padding: var(--space-xs);
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+h3 {
+  font-family: "Kavoon", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--space-xl);
+  color: #e1bdc7;
+  text-shadow: 3px 3px 0px #97596e;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+h4 {
+  font-family: Elsie, sans-serif;
+  font-size: var(--space-lg);
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+p {
+  font-family: Elsie, sans-serif;
+  font-size: 1.5rem;
+  color:;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+a {
+}
+
+/* Bokse */
+.introduktion {
+  background-color: #717c5c;
+  color: #faede5;
+  text-align: center;
+  padding: 3rem;
 }
 
 /* Globalt layout */
@@ -176,6 +298,7 @@ main > * {
   list-style: none;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
+  position-area: bottom span-right;
   @media (width > 600px) {
     display: flex;
     gap: var(--space-1);
@@ -185,10 +308,9 @@ main > * {
     position: static;
   }
 }
-
 .menu a {
   display: block;
-  padding: 0.4rem 0;
+  padding: 0.5rem 1rem;
   color: inherit;
   text-decoration: none;
   border-bottom: 2px solid #0000;
@@ -196,6 +318,61 @@ main > * {
 
 .menu a[aria-current="page"] {
   border-bottom-color: var(--color-border);
+}
+
+/* Popover og design */
+
+/* Forside */
+.card-content {
+  background-color: #faede5;
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.btn {
+  background-color: #e1bdc7;
+  font-family: "Kavoon", serif;
+  font-weight: 100;
+  font-size: var(--space-md);
+  color: #97596e;
+  border: none;
+  font-style: normal;
+  padding: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.card-popover_forside {
+  box-sizing: border-box;
+  width: 90vw;
+  max-width: 90ch;
+  max-height: 90vh;
+  overflow: auto;
+  padding: 1rem;
+  border: 3px solid #e1bdc7;
+  border-radius: 2rem;
+  background: #faede5;
+  color: #97596e;
+}
+.card-popover:popover-open {
+  display: grid;
+  gap: 0.75rem;
+  margin: auto;
+  justify-items: start;
+}
+
+::backdrop {
+  background: rgba(113, 149, 102, 0.286);
+}
+
+/* Grid */
+
+.grid_1-1-1 {
+  @media (width > 1070px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: stretch;
+    gap: 2rem;
+  }
 }
 
 /* Flader */
@@ -250,4 +427,79 @@ main > * {
   background: var(--color-surface);
   color: inherit;
   text-decoration: none;
+}
+
+/* Forside billede med tekst  */
+.hero {
+  grid-column: 1 / 4;
+  display: grid;
+  align-items: start;
+  justify-items: left;
+  position: relative;
+  overflow: hidden;
+  margin-block-end: var(--space-3);
+  min-height: 480px;
+}
+
+.hero .intro-billede {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.forside-tekst {
+  grid-area: 1 / 1;
+  background-color: rgba(250, 237, 229, 0.6);
+  backdrop-filter: blur(4px);
+  padding: clamp(1rem, 3vw, 2rem);
+  border-radius: 2rem;
+  border: 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-top: 6.5rem;
+  width: min(90%, 500px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forside-tekst h1:first-child {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  text-align: left;
+  color: #717c5c;
+  text-shadow: 3px 3px 0px #cbcbb1;
+  margin: 0;
+  line-height: 1;
+  z-index: 1;
+}
+
+.forside-tekst h2:last-child {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  text-align: right;
+  color: #97596e;
+  margin: 0;
+  margin-top: -8rem;
+  z-index: 2;
+  position: relative;
+}
+
+.forside-bundtekst {
+  grid-area: 1 / 1;
+  z-index: 2;
+  align-self: end;
+  margin-bottom: 7rem;
+  width: min(90%, 400px);
+  padding: 1rem 1.5rem;
+  background-color: rgba(196, 108, 137, 0.576);
+  color: #faede5;
+  border-radius: 1rem;
+  text-align: center;
+  backdrop-filter: blur(1px);
+}
+
+.forside-bundtekst p {
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 550;
 }
