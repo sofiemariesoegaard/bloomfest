@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="./style.css">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="./favicon_io/site.webmanifest">
+
 </head>
 
 <body class="fade-in">
@@ -160,6 +165,46 @@
     <hr class="divider">
     <section>
       <div class="grid_04">
+        <div class="grid_04-1">
+          <div class="svg-placeholder">
+            <svg class="svg_kort" viewBox="0 0 1366 768">
+              <use href="./kort_svg.svg#bod"></use>
+              <use href="./kort_svg.svg#drinks"></use>
+              <use href="./kort_svg.svg#krans"></use>
+              <use href="./kort_svg.svg#linje"></use>
+              <use class="vandkande" href="./kort_svg.svg#vandkande"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="grid_04-2">
+          <div class="accordion">
+            <details class="accordion-item" name="accordion" data-position="krans" id="details-krans">
+              <summary>Blomsterkrans-workshop</summary>
+              <div>
+                <p>Kom og slip kreativiteten fri! Vi stiller masser af friske blomster og materialer til rådighed, så du
+                  kan binde din helt
+                  egen smukke blomsterkrans til festivalen.</p>
+              </div>
+            </details>
+            <details class="accordion-item" name="accordion" data-position="bod" id="details-bod">
+              <summary>Boder og shops</summary>
+              <div>
+                <p>Gå på opdagelse i vores hyggelige markedsområde. Her finder du alt fra unikt lokalt kunsthåndværk og
+                  genbrugsguld til
+                  lækre godter og eksklusive Bloomfest-merchandise.</p>
+              </div>
+            </details>
+            <details class="accordion-item" name="accordion" data-position="drinks" id="details-drinks">
+              <summary>Drinks og vinsmagning</summary>
+              <div>
+                <p>Sluk tørsten i vores stemningsfulde loungeområde. Vi serverer forfriskende sommercocktails, kolde
+                  fadøl og byder på
+                  eksklusive smagsprøver fra sommerens vinkort.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
 
       </div>
     </section>
@@ -167,8 +212,30 @@
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>BloomFest</p>
-      <p>Footer</p>
+      <h4 class="grid_logo">BloomFest</h4>
+      <div class="grid_footer_1">
+        <p class="bold">Om BloomFest</p>
+        <p>Læs mere om BloomFest her</p>
+      </div>
+      <div class="grid_footer_2">
+        <p class="bold">Kontakt os</p>
+        <p>+45 60 70 85 46</p>
+        <p>bloomfest@kontakt.dk</p>
+      </div>
+      <div class="grid_footer_3">
+        <p class="bold">Sociale medier</p>
+        <div class="grid_imgs">
+          <div class="grid_3-1">
+            <img class="footer_imgs" src="./imgs/tiktok.png" alt="TikTok">
+          </div>
+          <div class="grid_3-2">
+            <img class="footer_imgs" src="./imgs/instagram.png" alt="Instagram">
+          </div>
+          <div class="grid_3-3">
+            <img class="footer_imgs" src="./imgs/facebook.png" alt="Facebook">
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
   <script src="./script.js"></script>
