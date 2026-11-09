@@ -625,7 +625,8 @@ hr.divider {
 }
 
 summary::after {
-  content: "+";
+  content: " ✿";
+  color: #e1bdc7;
   font-family: "system-ui";
   font-weight: 400;
   font-size: 1.5rem;
@@ -633,7 +634,8 @@ summary::after {
 }
 
 :open summary::after {
-  content: "-";
+  content: "❀";
+  color: #97596e;
 }
 
 ::details-content {
