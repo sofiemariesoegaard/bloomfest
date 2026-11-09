@@ -1,3 +1,6 @@
+/* ==========================================
+   1. HERO SEKTION
+   ========================================== */
 .hero {
   display: grid;
   grid-template-columns: 1fr;
@@ -74,6 +77,9 @@
   }
 }
 
+/* ==========================================
+   2. GRID 02 & GRID 03 (Sektioner og Kort)
+   ========================================== */
 .grid_02 {
   background-color: #717c5c;
   height: 23rem;
@@ -150,6 +156,9 @@
   margin-top: auto;
 }
 
+/* ==========================================
+   3. KNAPPER (Buttons)
+   ========================================== */
 .button {
   justify-self: start;
   display: inline-block;
@@ -172,6 +181,9 @@
   color: #97596e;
 }
 
+/* ==========================================
+   4. GRID 04
+   ========================================== */
 .grid_04 {
   background: #717c5c;
   height: 90vh;
@@ -179,4 +191,8 @@
   box-shadow:
     9px 9px 34px #0000006b,
     -9px -9px 34px #ffffff;
+  @media (width > 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }

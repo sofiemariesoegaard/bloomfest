@@ -1,4 +1,6 @@
-/* --- 1. FONTS --- */
+/* ==========================================
+   1. FONTS (@font-face)
+   ========================================== */
 @font-face {
   font-family: "elsieblack";
   src:
@@ -26,7 +28,9 @@
   font-style: normal;
 }
 
-/* --- 2. VARIABLER & BASIS --- */
+/* ==========================================
+   2. VARIABLER, HTML & BODY (Basis)
+   ========================================== */
 html {
   --color-page: #f7f7f7;
   --color-surface: #fff;
@@ -41,6 +45,7 @@ html {
 
   background: var(--color-page);
   color: var(--color-text);
+  interpolate-size: allow-keywords;
 }
 
 body {
@@ -51,6 +56,9 @@ body {
   grid-template-columns: minmax(1rlh, 1fr) minmax(0, 75rem) minmax(1rlh, 1fr);
 }
 
+/* ==========================================
+   3. TYPOGRAFI & MAIN LAYOUT
+   ========================================== */
 h1,
 h2,
 h3,
@@ -58,11 +66,12 @@ h4,
 p {
   margin: 0;
 }
-
+h1,
+h2,
 h3,
 h4 {
   font-family: "elsie-black";
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
 }
 
@@ -82,9 +91,10 @@ main > * {
   padding-block: var(--space-3);
 }
 
-/* --- 3. HEADER & FOOTER --- */
-.site-header,
-.site-footer {
+/* ==========================================
+   4. HEADER & NAVIGATION
+   ========================================== */
+.site-header {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: inherit;
@@ -95,12 +105,8 @@ main > * {
   background-size: 50px 20px;
 }
 
-.header-content,
-.footer-content {
-  grid-column: 2;
-}
-
 .header-content {
+  grid-column: 2;
   min-height: 4rem;
   display: flex;
   justify-content: space-between;
@@ -119,16 +125,6 @@ main > * {
   font-size: 2rem;
 }
 
-.footer-content {
-  padding-block: var(--space-1);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: var(--space-1);
-  color: var(--color-muted);
-}
-
-/* --- 4. NAVIGATION --- */
 [popover] {
   margin: 0;
   padding: 0;
@@ -188,11 +184,13 @@ main > * {
   border-bottom-color: var(--color-border);
 }
 
-/* --- 5. HERO & SEKTIONER --- */
+/* ==========================================
+   5. HERO SEKTION
+   ========================================== */
 .hero {
   display: grid;
   grid-template-columns: inherit;
-  grid-column: 1 /1;
+  grid-column: 1 / 1;
   grid-template-rows: 1fr;
   width: 100%;
   max-height: 500px;
@@ -280,7 +278,59 @@ main > * {
     width: 53%;
   }
 }
+@media (width > 600px) {
+  #herobanner,
+  .hero-content {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .hero {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+  }
+  .hero img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 240, 242, 0.9) 0%,
+      rgba(255, 240, 242, 0.6) 50%,
+      rgba(255, 255, 255, 0) 80%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+}
 
+/* ==========================================
+   6. GRID LAYOUTS & SEKTIONER
+   ========================================== */
 .grid_02 {
   background-color: #717c5c;
   height: 30rem;
@@ -358,16 +408,19 @@ main > * {
 }
 
 .grid_04 {
-  background: #717c5c;
-  height: 90vh;
+  background: inherit;
+  height: max-content;
   margin-top: -5.5rem;
   border-radius: 6px;
   box-shadow:
     9px 9px 34px #0000006b,
     -9px -9px 34px #ffffff;
+  overflow: hidden;
 }
 
-/* --- 6. KNAPPER --- */
+/* ==========================================
+   7. KNAPPER (Buttons)
+   ========================================== */
 .button {
   justify-self: start;
   display: inline-block;
@@ -390,7 +443,9 @@ main > * {
   color: #97596e;
 }
 
-/* --- 7. POPOVERS & MODALS --- */
+/* ==========================================
+   8. POPOVERS & MODALS
+   ========================================== */
 .min-popup {
   background-color: #faede5;
   padding: 1rem;
@@ -465,28 +520,9 @@ hr.divider {
   margin-block: 1rem;
 }
 
-/* --- 8. ANIMATIONER --- */
-.fade-in {
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-duration: 2.5s;
-}
-
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.opsamling-placeholder {
-  min-height: -webkit-fill-available;
-  min-height: stretch;
-}
-
-/* --- 9. Flader ---*/
+/* ==========================================
+   9. PLACEHOLDERS & PANELS
+   ========================================== */
 .panel,
 .form-placeholder {
   background: var(--color-surface);
@@ -497,9 +533,11 @@ hr.divider {
   padding: var(--space-1);
   display: grid;
   gap: var(--space-1);
+  border-radius: 10px;
 }
 
 .opsamling-placeholder {
+  min-height: -webkit-fill-available;
   min-height: stretch;
 }
 
@@ -514,29 +552,188 @@ hr.divider {
   min-height: stretch;
   padding: var(--space-1);
 }
+
+/* ==========================================
+   10. INTERAKTIV SVG & LAYOUT
+   ========================================== */
 .svg-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
+
+  @media (width > 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
+
 .svg-placeholder {
   min-height: -webkit-fill-available;
   min-height: stretch;
-  background: #e1bdc7;
+  background: #717c5c;
+  border-radius: 10px;
 }
 
-/* --- 10. Details ---*/
+.vandkande {
+  transition: transform 0.8s ease;
+}
+
+.svg-placeholder[data-position="krans"] .vandkande {
+  transform: translate(-384px, -16px);
+}
+
+.svg-placeholder[data-position="bod"] .vandkande {
+  transform: translate(-670px, -335px);
+}
+
+.svg-placeholder[data-position="drinks"] .vandkande {
+  transform: translate(-146px, -395px);
+}
+
+/* ==========================================
+   11. ACCORDIONS & DETAILS
+   ========================================== */
 .accordion {
   display: grid;
-  gap: var(--space-05);
+  gap: 0.1rem;
+  font-family: "elsie-black";
+  font-size: 1.5rem;
+  margin-inline: 1rem;
+  margin-block: 1rem;
+  height: 90%;
+  p {
+    font-size: 1rem;
+  }
 }
 
 .accordion-item {
-  border: 1px solid var(--color-border);
   background: var(--color-surface);
+  padding-inline: 1rem;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: background-color 0.4s ease;
+  border: 1px solid #e1bdc7;
 }
 
--accordion-item p {
+.accordion-item p {
   padding: 0 var(--space-1) var(--space-1);
-  color: var(--color-muted);
+  color: var(--color-text);
+}
+
+.accordion-item[open] {
+  background-color: #e1bdc7;
+  border: 1px solid #97596e;
+}
+
+summary::after {
+  content: "+";
+  font-family: "system-ui";
+  font-weight: 400;
+  font-size: 1.5rem;
+  float: right;
+}
+
+:open summary::after {
+  content: "-";
+}
+
+::details-content {
+  height: 0;
+  overflow: clip;
+  transition: 0.3s;
+  transition-behavior: allow-discrete;
+}
+
+:open::details-content {
+  height: auto;
+}
+summary::-webkit-details-marker {
+  display: none !important;
+}
+
+summary {
+  list-style: none;
+}
+
+/* ==========================================
+   12. FOOTER
+   ========================================== */
+.site-footer {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: inherit;
+  background-color: #e1bdc7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 20' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q20,1 40,20 Z' fill='%23f7f7f7'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 50px 20px;
+}
+
+.footer-content {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: #222;
+  padding-block: var(--space-1);
+  padding-bottom: 4rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-1);
+
+  h4 {
+    font-family: "bloom";
+    color: #f9f9f9;
+    text-shadow: #97596e 2px 2px;
+    font-size: 2.5rem;
+  }
+
+  .bold {
+    font-family: "elsie-black";
+  }
+
+  .grid_logo {
+    grid-column: span 3;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+  }
+
+  .footer_imgs {
+    width: 40px;
+  }
+
+  .grid_imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (width > 600px) {
+    p {
+      font-size: 1rem;
+      color: var(--color-muted);
+    }
+    .footer_imgs {
+      width: 60px;
+    }
+  }
+}
+
+/* ==========================================
+   13. ANIMATIONER & UTILITIES
+   ========================================== */
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-duration: 2.5s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
