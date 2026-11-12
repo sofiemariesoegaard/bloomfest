@@ -748,7 +748,9 @@ summary {
   font-family: "Kavoon", serif;
   font-weight: 400;
   font-style: normal;
+  font-size: xx-large;
   color: #cbcbb1;
+  text-shadow: #717c5c 1.5px 1.5px;
 }
 
 form{
