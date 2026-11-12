@@ -37,9 +37,141 @@
         <p>Lav en formular, der sender brugeren videre til opsamlingssiden.</p>
       </header>
 
-      <form class="form-placeholder" action="./opsamling.html"></form>
+      <form class="form-placeholder" action="./opsamling.html">
+        <h2>Lad dig blomstre</h2>
+
+        <label for="name">Hvad hedder du?</label>
+        <input id="name" type="text" name="hvad hedder du?" />
+
+        <fieldset class="group_1">
+          <legend>Hvilke farver kan du bedst lide?</legend>
+          <label for="rosa">
+            <input type="checkbox" value="rosa" name="farver" id="rosa" />
+            Rosa
+          </label>
+
+          <label for="gul">
+            <input type="checkbox" value="gul" name="farver" id="gul" />
+            Gul
+          </label>
+
+          <label for="lilla">
+            <input type="checkbox" value="lilla" name="farver" id="lilla" />
+            Lilla
+          </label>
+
+          <label for="hvid">
+            <input type="checkbox" value="hvid" name="farver" id="hvid" />
+            Hvid
+          </label>
+
+          <label for="roed">
+            <input type="checkbox" value="roed" name="farver" id="roed" />
+            Rød
+          </label>
+
+          <label for="groen">
+            <input type="checkbox" value="groen" name="farver" id="groen" />
+            Grøn
+          </label>
+
+          <label for="orange">
+            <input type="checkbox" value="orange" name="farver" id="orange" />
+            Orange
+          </label>
+        </fieldset>
+
+
+        <fieldset class="group_2">
+          <legend>Hvilket af disse ord beskriver dig bedst?</legend>
+          <label for="rolig">
+            <input type="radio" value="rolig" name="beskriv" id="rolig" />
+            Rolig
+          </label>
+
+          <label for="eventyrlig">
+            <input type="radio" value="eventyrlig" name="beskriv" id="eventyrlig" />
+            Eventyrlig
+          </label>
+
+          <label for="romantisk">
+            <input type="radio" value="romantisk" name="beskriv" id="romantisk" />
+            Romantisk
+          </label>
+
+          <label for="energisk">
+            <input type="radio" value="energisk" name="beskriv" id="energisk" />
+            Energisk
+          </label>
+        </fieldset>
+
+        <label for="range_omgivelser"> Hvilke omgivelser tiltaler dig?</label>
+        <div class="range_tekst">
+          <span>Enkle og elegante omgivelser</span>
+          <input id="omgivelser" type="range" />
+          <span>Romantiske og overdådige omgivelser</span>
+        </div>
+
+        <fieldset class="group_3">
+          <legend>Hvilken årstid foretrækker du?</legend>
+          <label for="forar">
+            <input type="radio" value="forar" name="arstid" id="forar" />
+            Forår
+          </label>
+
+          <label for="sommer">
+            <input type="radio" value="sommer" name="arstid" id="sommer" />
+            Sommer
+          </label>
+
+          <label for="efterar">
+            <input type="radio" value="efterar" name="arstid" id="efterar" />
+            Efterår
+          </label>
+
+          <label for="vinter">
+            <input type="radio" value="vinter" name="arstid" id="vinter" />
+            Vinter
+          </label>
+        </fieldset>
+
+
+        <fieldset class="group_4">
+          <legend>Hvilket miljø foretrækker du?</legend>
+          <label for="blomstrende_have">
+            <input type="radio" value="blomstrende_have" name="miljo" id="blomstrende_have" />
+            En blomstrende have
+          </label>
+
+          <label for="solrig_strand">
+            <input type="radio" value="solrig_strand" name="miljo" id="solrig_strand" />
+            En solrig strand
+          </label>
+
+          <label for="eventyrlig_skov">
+            <input type="radio" value="eventyrlig_skov" name="miljo" id="eventyrlig_skov" />
+            En eventyrlig skov
+          </label>
+
+          <label for="aben_slotseng">
+            <input type="radio" value="aben_slotseng" name="miljo" id="aben_slotseng" />
+            En åben slotseng
+          </label>
+
+          <label for="romantisk_slotshave">
+            <input type="radio" value="romantisk_slotshave" name="miljo" id="romantisk_slotshave" />
+            En romantisk slotshave
+          </label>
+        </fieldset>
+
+        <button type="submit">Find min blomst</button>
+
+      </form>
     </section>
   </main>
+
+
+
 
   <footer class="site-footer">
     <div class="footer-content">
