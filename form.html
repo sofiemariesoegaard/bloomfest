@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="./style.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
@@ -38,133 +41,182 @@
       </header>
 
       <form class="form-placeholder" action="./opsamling.html">
-        <h2>Lad dig blomstre</h2>
 
-        <label for="name">Hvad hedder du?</label>
-        <input id="name" type="text" name="hvad hedder du?" />
+        <h2 class="h2-formular">Lad dig blomstre</h2>
 
-        <fieldset class="group_1">
-          <legend>Hvilke farver kan du bedst lide?</legend>
-          <label for="rosa">
-            <input type="checkbox" value="rosa" name="farver" id="rosa" />
-            Rosa
-          </label>
-
-          <label for="gul">
-            <input type="checkbox" value="gul" name="farver" id="gul" />
-            Gul
-          </label>
-
-          <label for="lilla">
-            <input type="checkbox" value="lilla" name="farver" id="lilla" />
-            Lilla
-          </label>
-
-          <label for="hvid">
-            <input type="checkbox" value="hvid" name="farver" id="hvid" />
-            Hvid
-          </label>
-
-          <label for="roed">
-            <input type="checkbox" value="roed" name="farver" id="roed" />
-            Rød
-          </label>
-
-          <label for="groen">
-            <input type="checkbox" value="groen" name="farver" id="groen" />
-            Grøn
-          </label>
-
-          <label for="orange">
-            <input type="checkbox" value="orange" name="farver" id="orange" />
-            Orange
-          </label>
-        </fieldset>
-
-
-        <fieldset class="group_2">
-          <legend>Hvilket af disse ord beskriver dig bedst?</legend>
-          <label for="rolig">
-            <input type="radio" value="rolig" name="beskriv" id="rolig" />
-            Rolig
-          </label>
-
-          <label for="eventyrlig">
-            <input type="radio" value="eventyrlig" name="beskriv" id="eventyrlig" />
-            Eventyrlig
-          </label>
-
-          <label for="romantisk">
-            <input type="radio" value="romantisk" name="beskriv" id="romantisk" />
-            Romantisk
-          </label>
-
-          <label for="energisk">
-            <input type="radio" value="energisk" name="beskriv" id="energisk" />
-            Energisk
-          </label>
-        </fieldset>
-
-        <label for="range_omgivelser"> Hvilke omgivelser tiltaler dig?</label>
-        <div class="range_tekst">
-          <span>Enkle og elegante omgivelser</span>
-          <input id="omgivelser" type="range" />
-          <span>Romantiske og overdådige omgivelser</span>
+        <div class="form-group">
+          <label for="name">Hvad hedder du?</label>
+          <input id="name" type="text" name="hvad hedder du?" />
         </div>
 
-        <fieldset class="group_3">
-          <legend>Hvilken årstid foretrækker du?</legend>
-          <label for="forar">
-            <input type="radio" value="forar" name="arstid" id="forar" />
-            Forår
-          </label>
+        <div class="form-group">
+          <fieldset>
+            <legend>Hvilke farver kan du bedst lide?</legend>
 
-          <label for="sommer">
-            <input type="radio" value="sommer" name="arstid" id="sommer" />
-            Sommer
-          </label>
+            <label class="blomst-checkbox">
+              <input type="checkbox" name="valg1">
+              <span class="blomst-ikon">✿</span>
+              <span>Rosa</span>
+            </label>
 
-          <label for="efterar">
-            <input type="radio" value="efterar" name="arstid" id="efterar" />
-            Efterår
-          </label>
+            <label class="blomst-checkbox">
+              <input type="checkbox" name="valg1">
+              <span class="blomst-ikon">✿</span>
+              <span>Gul</span>
+            </label>
 
-          <label for="vinter">
-            <input type="radio" value="vinter" name="arstid" id="vinter" />
-            Vinter
-          </label>
-        </fieldset>
+            <label class="blomst-checkbox">
+              <input type="checkbox" name="valg1">
+              <span class="blomst-ikon">✿</span>
+              <span>Lilla</span>
+            </label>
+
+            <label class="blomst-checkbox">
+              <input type="checkbox" name="valg1">
+              <span class="blomst-ikon">✿</span>
+              <span>Hvid</span>
+            </label>
+
+            <label class="blomst-checkbox">
+              <input type="checkbox" name="valg1">
+              <span class="blomst-ikon">✿</span>
+              <span>Rød</span>
+            </label>
+
+            <label class="blomst-checkbox">
+              <input type="checkbox" name="valg1">
+              <span class="blomst-ikon">✿</span>
+              <span>Grøn</span>
+            </label>
+
+            <label class="blomst-checkbox">
+              <input type="checkbox" name="valg1">
+              <span class="blomst-ikon">✿</span>
+              <span>Orange</span>
+            </label>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>Hvilket af disse ord beskriver dig bedst?</legend>
 
 
-        <fieldset class="group_4">
-          <legend>Hvilket miljø foretrækker du?</legend>
-          <label for="blomstrende_have">
-            <input type="radio" value="blomstrende_have" name="miljo" id="blomstrende_have" />
-            En blomstrende have
-          </label>
+            <label class="blomst-checkbox">
+              <input type="radio" name="valg1">
+              <span class="blomst-ikon">❀</span>
+              <span>Rolig</span>
+            </label>
 
-          <label for="solrig_strand">
-            <input type="radio" value="solrig_strand" name="miljo" id="solrig_strand" />
-            En solrig strand
-          </label>
+            <label class="blomst-checkbox">
+              <input type="radio" name="valg1">
+              <span class="blomst-ikon">❀</span>
+              <span>Eventyrlig</span>
+            </label>
 
-          <label for="eventyrlig_skov">
-            <input type="radio" value="eventyrlig_skov" name="miljo" id="eventyrlig_skov" />
-            En eventyrlig skov
-          </label>
+            <label class="blomst-checkbox">
+              <input type="radio" name="valg1">
+              <span class="blomst-ikon">❀</span>
+              <span>Romantisk</span>
+            </label>
 
-          <label for="aben_slotseng">
-            <input type="radio" value="aben_slotseng" name="miljo" id="aben_slotseng" />
-            En åben slotseng
-          </label>
+            <label class="blomst-checkbox">
+              <input type="radio" name="valg1">
+              <span class="blomst-ikon">❀</span>
+              <span>Energisk</span>
+            </label>
 
-          <label for="romantisk_slotshave">
-            <input type="radio" value="romantisk_slotshave" name="miljo" id="romantisk_slotshave" />
-            En romantisk slotshave
-          </label>
-        </fieldset>
+          </fieldset>
+        </div>
 
-        <button type="submit">❀ Find min blomst ❀</button>
+        <div class="form-group">
+          <label for="range_omgivelser"> Hvilke omgivelser tiltaler dig?</label>
+          <div class="range_tekst">
+            <span>Enkle og elegante omgivelser</span>
+            <input id="omgivelser" type="range" />
+            <span>Romantiske og overdådige omgivelser</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>Hvilken årstid foretrækker du?</legend>
+
+            <label class="blomst-checkbox">
+              <input type="radio" name="valg1">
+              <span class="blomst-ikon">❀</span>
+              <span>forår</span>
+            </label>
+
+            <label class="blomst-checkbox">
+              <input type="radio" name="valg1">
+              <span class="blomst-ikon">❀</span>
+              <span>Sommer</span>
+            </label>
+
+            <label class="blomst-checkbox">
+              <input type="radio" name="valg1">
+              <span class="blomst-ikon">❀</span>
+              <span>Efterår</span>
+            </label>
+
+            <label class="blomst-checkbox">
+              <input type="radio" name="valg1">
+              <span class="blomst-ikon">❀</span>
+              <span>Vinter</span>
+            </label>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>Hvilket miljø foretrækker du?</legend>
+
+            <label class="blomst-checkbox">
+              <input type="radio" name="valg1">
+              <span class="blomst-ikon">❀</span>
+              <span>En blomstrende have</span>
+            </label>
+
+            <label class="blomst-checkbox">
+              <input type="radio" name="valg1">
+              <span class="blomst-ikon">❀</span>
+              <span>En solrig strand</span>
+            </label>
+
+            <label class="blomst-checkbox">
+              <input type="radio" name="valg1">
+              <span class="blomst-ikon">❀</span>
+              <span>En eventyrlig skov</span>
+            </label>
+
+            <label class="blomst-checkbox">
+              <input type="radio" name="valg1">
+              <span class="blomst-ikon">❀</span>
+              <span>En åben slotseng</span>
+            </label>
+
+            <label class="blomst-checkbox">
+              <input type="radio" name="valg1">
+              <span class="blomst-ikon">❀</span>
+              <span>En romantisk slotshave</span>
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <label class="blomst-checkbox">
+              <input type="checkbox" name="valg1">
+              <span class="blomst-ikon">✿</span>
+              <span>Ja tak, tilmeld mig</span>
+            </label>
+          </fieldset>
+        </div>
+
+        <button type="submit">Find min blomst</button>
 
       </form>
     </section>

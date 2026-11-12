@@ -738,3 +738,91 @@ summary {
     opacity: 1;
   }
 }
+
+/* ==========================================
+   14. FORMULAR & OPSAMLING DESIGN
+   ========================================== */
+/*********** Formular ************/
+
+.h2-formular {
+  font-family: "Kavoon", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #cbcbb1;
+}
+
+form{
+  accent-color: ;
+}
+
+input {
+  border: 1px solid #97596e;
+  border-radius: 18px;
+  padding: 5px 10px;
+  box-shadow:;
+}
+
+button {
+  background:;
+  color:;
+  border:;
+  cursor: pointer;
+  
+}
+:focus-visible {
+  /* Focus states */
+}
+button:hover {
+  /* Hover states */
+}
+button:active {
+  /* Pressed states */
+}
+
+.error-message:;{
+  color:;
+}
+
+label:has(input[type="radio"], [type="checkbox"]){
+
+}
+
+.blomst-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  font-family: sans-serif;
+}
+
+/* Skjul standardboksen */
+.blomst-checkbox input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Blomstens udseende før klik (grå og neutral) */
+.blomst-ikon {
+  font-size: 24px;
+  color: #e1bdc7;
+  line-height: 1;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Blomstens udseende når boksen er valgt (:checked) */
+.blomst-checkbox input:checked + .blomst-ikon {
+  color: #97596e; /* Lyserød/magenta farve */
+  transform: rotate(72deg) scale(1.15);
+}
+
+/* Fokus-ramme ved brug af tastatur (Tab) */
+.blomst-checkbox input:focus-visible + .blomst-ikon {
+  outline: 2px solid #005fcc;
+  outline-offset: 3px;
+  border-radius: 50%;
+}
