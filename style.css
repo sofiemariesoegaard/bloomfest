@@ -1,4 +1,16 @@
 /* ==========================================
+   FARVER
+   ========================================== */
+farver {
+  color: #faede5;
+  color: #e7dfee;
+  color: #cbcbb1;
+  color: #e1bdc7;
+  color: #97596e;
+  color: #717c5c;
+}
+
+/* ==========================================
    1. FONTS (@font-face)
    ========================================== */
 @font-face {
@@ -753,40 +765,94 @@ summary {
   text-shadow: #717c5c 1.5px 1.5px;
 }
 
-form{
-  accent-color:pink ;
+span {
+  font-family: elsieregular;
+  font-weight: 500;
+}
+
+fieldset {
+  display: grid;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 15px;
+  border: 1px solid #97596e;
+}
+legend {
+  color: #97596e;
+  font-size: 1.2rem;
+}
+
+.range_tekst {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  font-family: elsieregular;
+  font-size: 1rem;
+  padding-block: 2rem;
+  color: #97596e;
 }
 
 input {
   border: 1px solid #97596e;
   border-radius: 18px;
   padding: 5px 10px;
-  box-shadow:;
+  box-shadow: 3px solid #e1bdc7;
 }
 
-button {
-  background:;
-  color:;
-  border:;
-  cursor: pointer;
-  
+.form-placeholder {
+  background-color: #faede5;
 }
+
+form {
+  accent-color: #717c5c;
+  padding: 5px;
+  border-radius: 15px;
+  @media (width > 800px) {
+    max-width: 50%;
+    float: right;
+  }
+}
+
+.form-group {
+  display: grid;
+  gap: 1px;
+  padding-bottom: 15px;
+  font-family: elsieblack;
+  font-size: 1.5rem;
+}
+/* slettes */
+button {
+  background: #cbcbb1;
+  color: #97596e;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-family: "Kavoon", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 :focus-visible {
   /* Focus states */
+  outline: 3px solid #717c5c;
+  outline-offset: 1px;
 }
 button:hover {
   /* Hover states */
+  background: #717c5c;
 }
 button:active {
   /* Pressed states */
+  background-color: #97596e;
 }
 
-.error-message:;{
-  color:;
+.error-message {
+  color: #97596e;
 }
 
-label:has(input[type="radio"], [type="checkbox"]){
-
+label:has(input:is([type="radio"], [type="checkbox"])) {
+  display: flex;
+  align-items: center;
 }
 
 .blomst-checkbox {
@@ -824,7 +890,7 @@ label:has(input[type="radio"], [type="checkbox"]){
 
 /* Fokus-ramme ved brug af tastatur (Tab) */
 .blomst-checkbox input:focus-visible + .blomst-ikon {
-  outline: 2px solid #005fcc;
+  outline: 10px solid #717c5c;
   outline-offset: 3px;
   border-radius: 50%;
 }
