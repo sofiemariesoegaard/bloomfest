@@ -9,9 +9,8 @@ farver {
   color: #97596e;
   color: #717c5c;
 }
-
 /* ==========================================
-   1. FONTS (@font-face)
+   1. FONTS
    ========================================== */
 @font-face {
   font-family: "elsieblack";
@@ -41,16 +40,14 @@ farver {
 }
 
 /* ==========================================
-   2. VARIABLER, HTML & BODY (Basis)
+   2. VARIABLER, HTML & BODY
    ========================================== */
 html {
   --color-page: #f7f7f7;
   --color-surface: #fff;
   --color-text: #222;
   --color-muted: #666;
-  --color-border: #d8d8d8;
-  --color-brand: #e1bdc7;
-  --space-05: 0.5rem;
+  --color-border: #b22424;
   --space-1: 1rem;
   --space-2: 2rem;
   --space-3: 3rem;
@@ -76,11 +73,13 @@ h4,
 p {
   margin: 0;
 }
+
 h3,
 h4 {
   font-family: "elsieblack";
   font-size: 1.5rem;
   margin-top: 1rem;
+  color: #4c543e;
 }
 
 h1 {
@@ -97,20 +96,6 @@ h2 {
   color: #97596e;
 }
 
-h3 {
-  font-family: "elsieblack";
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  color: #4c543e;
-}
-
-h4 {
-  font-family: "elsieblack";
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  color: #4c543e;
-}
-
 p {
   font-family: "elsieregular";
   color: #4c543e;
@@ -121,6 +106,7 @@ summary {
   font-size: 1.4rem;
   margin-top: 1rem;
   color: #4c543e;
+  list-style: none;
 }
 
 main {
@@ -195,6 +181,7 @@ main > * {
   font-size: 1.3rem;
   border: none;
   text-shadow: #97596e 2px;
+
   @media (width > 600px) {
     display: none !important;
   }
@@ -238,7 +225,7 @@ main > * {
 }
 
 .menu a[aria-current="page"] {
-  border-bottom-color: var(--color-border);
+  border-bottom-color: #97596e;
 }
 
 /* ==========================================
@@ -274,6 +261,7 @@ main > * {
     rgba(255, 255, 255, 0.7) 30%,
     rgba(255, 255, 255, 0) 100%
   );
+
   -webkit-mask-image: linear-gradient(
     to top,
     rgba(255, 255, 255, 1) 0%,
@@ -306,6 +294,7 @@ main > * {
   color: #e1bdc7;
   text-shadow: #97596e 1.5px 1.5px;
   margin-bottom: -2rem;
+
   @media (width > 600px) {
     font-size: 8rem;
     text-shadow: #97596e 3.5px 3.5px;
@@ -321,6 +310,7 @@ main > * {
   font-size: 1.5rem;
   margin-top: 0.5rem;
   font-weight: 500;
+
   @media (width > 600px) {
     font-size: 3rem;
   }
@@ -331,16 +321,19 @@ main > * {
   height: 0.1rem;
   background-color: #97596e;
   margin-top: 0.6rem;
+
   @media (width > 600px) {
     width: 53%;
   }
 }
+
 @media (width > 600px) {
   #herobanner,
   .hero-content {
     background: transparent !important;
     box-shadow: none !important;
   }
+
   .hero {
     position: relative;
     width: 100vw;
@@ -350,12 +343,14 @@ main > * {
     margin-right: -50vw;
     overflow: hidden;
   }
+
   .hero img {
     width: 100%;
     height: 500px;
     object-fit: cover;
     display: block;
   }
+
   .hero::after {
     content: "";
     position: absolute;
@@ -372,6 +367,7 @@ main > * {
     pointer-events: none;
     z-index: 1;
   }
+
   .hero-content {
     position: absolute;
     top: 50%;
@@ -414,6 +410,7 @@ main > * {
     font-size: 1.3rem;
     max-width: 65ch;
   }
+
   @media (width > 600px) {
     height: 23rem;
   }
@@ -424,6 +421,9 @@ main > * {
   flex-direction: column;
   margin-top: -5.5rem;
   gap: 1rem;
+  animation: pop_up both;
+  animation-timeline: scroll();
+  animation-range: 30% 60%;
 
   @media (width > 600px) {
     display: grid;
@@ -444,15 +444,14 @@ main > * {
     9px 9px 34px #e3e3e3,
     -9px -9px 34px #ffffff;
 
-  h3 {
-    font-size: 1.7rem;
-  }
   p {
     font-size: 1.1rem;
   }
+
   button {
     font-size: 1rem;
   }
+
   img {
     border-radius: 5px;
   }
@@ -476,7 +475,7 @@ main > * {
 }
 
 /* ==========================================
-   7. KNAPPER (Buttons)
+   7. KNAPPER
    ========================================== */
 .button {
   justify-self: start;
@@ -498,6 +497,30 @@ main > * {
 .button:hover {
   background-color: #e1bdc7;
   color: #97596e;
+}
+
+button {
+  background: #cbcbb1;
+  color: #97596e;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-family: "Kavoon", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+button:hover {
+  background: #717c5c;
+}
+
+button:active {
+  background-color: #97596e;
+}
+
+:focus-visible {
+  outline: 3px solid #717c5c;
+  outline-offset: 1px;
 }
 
 /* ==========================================
@@ -538,11 +561,6 @@ main > * {
   }
 }
 
-/* Ved ikke hvad denne bruges til
-::backdrop {
-  background: #222;
-} */
-
 @starting-style {
   [popover]:popover-open {
     opacity: 0;
@@ -579,7 +597,7 @@ hr.divider {
 }
 
 /* ==========================================
-   9. PLACEHOLDERS & PANELS
+   9. PANELS & FORMULARFELT
    ========================================== */
 .panel,
 .form-placeholder {
@@ -594,11 +612,6 @@ hr.divider {
   border-radius: 10px;
 }
 
-.opsamling-placeholder {
-  min-height: -webkit-fill-available;
-  min-height: stretch;
-}
-
 .svg-intro {
   display: grid;
   gap: var(--space-1);
@@ -609,10 +622,11 @@ hr.divider {
   min-height: -webkit-fill-available;
   min-height: stretch;
   padding: var(--space-1);
+  background-color: #faede5;
 }
 
 /* ==========================================
-   10. INTERAKTIV SVG & LAYOUT
+   10. INTERAKTIV SVG
    ========================================== */
 .svg-layout {
   display: grid;
@@ -658,6 +672,7 @@ hr.divider {
   margin-inline: 1rem;
   margin-block: 1rem;
   height: 90%;
+
   p {
     font-size: 1rem;
   }
@@ -705,12 +720,9 @@ summary::after {
 :open::details-content {
   height: auto;
 }
+
 summary::-webkit-details-marker {
   display: none !important;
-}
-
-summary {
-  list-style: none;
 }
 
 /* ==========================================
@@ -742,8 +754,6 @@ summary {
   color: #222;
   padding-block: var(--space-1);
   padding-bottom: 4rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
   gap: var(--space-1);
 
   h4 {
@@ -780,6 +790,7 @@ summary {
       font-size: 1rem;
       color: var(--color-muted);
     }
+
     .footer_imgs {
       width: 60px;
     }
@@ -787,12 +798,20 @@ summary {
 }
 
 /* ==========================================
-   13. ANIMATIONER & UTILITIES
+   13. ANIMATIONER
    ========================================== */
+@keyframes pop_up {
+  from {
+    scale: 30%;
+    opacity: 0;
+  }
+}
+
 @keyframes fadeInOpacity {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -819,9 +838,42 @@ summary {
 }
 
 /* ==========================================
-   14. FORMULAR & OPSAMLING DESIGN
+   14. FORMULAR
    ========================================== */
-/*********** Formular ************/
+.grid_forms {
+  @media (width > 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.boks {
+  background-color: #faede5;
+  padding: 0.3rem;
+  margin-block: 1.5rem;
+  border-radius: 10px;
+  box-shadow:
+    9px 9px 34px #e3e3e3,
+    -9px -9px 34px #ffffff;
+  max-width: 100%;
+  min-height: auto;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+
+  h2 {
+    margin: auto;
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  @media (width > 600px) {
+    padding: 1rem;
+    max-width: 90%;
+  }
+}
 
 .h2-formular {
   font-family: "Kavoon", serif;
@@ -845,6 +897,7 @@ fieldset {
   border-radius: 15px;
   border: 1px solid #97596e;
 }
+
 legend {
   color: #97596e;
   font-size: 1.2rem;
@@ -867,16 +920,13 @@ input {
   box-shadow: 3px solid #e1bdc7;
 }
 
-.form-placeholder {
-  background-color: #faede5;
-}
-
 form {
   accent-color: #717c5c;
   padding: 5px;
   border-radius: 15px;
+
   @media (width > 800px) {
-    max-width: 50%;
+    max-width: 100%;
     float: right;
   }
 }
@@ -889,34 +939,10 @@ form {
   font-size: 1.5rem;
   color: #4c543e;
 }
-/* slettes */
-button {
-  background: #cbcbb1;
-  color: #97596e;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-  font-family: "Kavoon", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-:focus-visible {
-  /* Focus states */
-  outline: 3px solid #717c5c;
-  outline-offset: 1px;
-}
-button:hover {
-  /* Hover states */
-  background: #717c5c;
-}
-button:active {
-  /* Pressed states */
-  background-color: #97596e;
-}
 
 .error-message {
   color: #97596e;
+  font-size: 1rem;
 }
 
 label:has(input:is([type="radio"], [type="checkbox"])) {
@@ -951,21 +977,22 @@ label:has(input:is([type="radio"], [type="checkbox"])) {
     transform 0.25s ease;
 }
 
-/* Blomstens udseende når boksen er valgt (:checked) */
+/* Blomstens udseende når den er valgt */
 .blomst-checkbox input:checked + .blomst-ikon {
-  color: #97596e; /* Lyserød/magenta farve */
+  color: #97596e;
   transform: rotate(72deg) scale(1.15);
 }
 
-/* Fokus-ramme ved brug af tastatur (Tab) */
+/* Fokus-ramme ved brug af tastatur */
 .blomst-checkbox input:focus-visible + .blomst-ikon {
   outline: 10px solid #717c5c;
   outline-offset: 3px;
   border-radius: 50%;
 }
 
-/************** Opsamling **************/
-/*** Styret af Javascript***/
+/* ==========================================
+   15. OPSAMLING
+   ========================================== */
 
 /* Farver på blomsterfrimærket */
 .blomster-frimaerke[data-color="rosa"] {
@@ -996,60 +1023,16 @@ label:has(input:is([type="radio"], [type="checkbox"])) {
   background-color: #e5a66a;
 }
 
-/*** Opsamlingsside design ***/
 /* Blomsterfrimærke */
-.blomster-frimaerke {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 40px;
-  border-radius: 15px;
-  text-align: center;
-}
-
-/* Blomsterbillede */
-.resultat-billede {
-  width: 250px;
-  height: auto;
-  margin: 20px auto;
-  display: block;
-}
-
-/* Blomstens navn*/
-.resultat-navn {
-  font-family: elsieregular;
-  font-size: 42px;
-  margin: 15px 0;
-}
-
-.bruger-navn {
-  font-size: 40px;
-}
-
-/* Blomstens beskrivelse */
-.resultat-beskrivelse {
-  max-width: 500px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* Lille overskrift på frimærket */
-.resultat-intro {
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
-}
-
-/* Ydre baggrund på blomsterresultatet */
 .blomster-frimaerke {
   max-width: 1000px;
   margin: 40px auto;
   padding: 45px;
   text-align: center;
+  border-radius: 15px;
 }
 
-/* Frimærke farve */
+/* Indhold på blomsterfrimærket */
 .frimaerke-indhold {
   background-color: #faede5;
   padding: 45px;
@@ -1058,6 +1041,29 @@ label:has(input:is([type="radio"], [type="checkbox"])) {
   align-items: center;
   gap: 30px;
   position: relative;
+
+  @media (width < 600px) {
+    grid-template-columns: 1fr 1fr;
+
+    p {
+      font-size: 0.8rem;
+      text-align: left;
+    }
+
+    .resultat-navn {
+      font-size: 2rem;
+    }
+
+    .bruger-navn {
+      font-family: "kavoon";
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    img {
+      max-width: 130%;
+    }
+  }
 }
 
 .frimaerke-indhold::before {
@@ -1106,4 +1112,31 @@ label:has(input:is([type="radio"], [type="checkbox"])) {
   background-size: 28px 28px;
   background-position: center top;
   z-index: 1;
+}
+
+/* Blomsterbillede */
+.resultat-billede {
+  width: 250px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Blomstens navn */
+.resultat-navn {
+  font-family: elsieregular;
+  font-size: 42px;
+  margin: 15px 0;
+}
+
+.bruger-navn {
+  font-size: 40px;
+}
+
+/* Blomstens beskrivelse */
+.resultat-beskrivelse {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
 }
