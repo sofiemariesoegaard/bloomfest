@@ -1,6 +1,0 @@
-This favicon was generated using the following font:
-
-- Font Title: Elsie
-- Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/elsie/v26/BCaqqZABrez54x6q2-1IU6QeXSBk.ttf
-- Font License: undefined)

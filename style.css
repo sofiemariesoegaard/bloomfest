@@ -1,4 +1,16 @@
 /* ==========================================
+   FARVER
+   ========================================== */
+farver {
+  color: #faede5;
+  color: #e7dfee;
+  color: #cbcbb1;
+  color: #e1bdc7;
+  color: #97596e;
+  color: #717c5c;
+}
+
+/* ==========================================
    1. FONTS (@font-face)
    ========================================== */
 @font-face {
@@ -99,10 +111,19 @@ main > * {
   display: grid;
   grid-template-columns: inherit;
   background-color: #e1bdc7;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 20' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q20,1 40,20 Z' fill='%23f7f7f7'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-position: bottom;
-  background-size: 50px 20px;
+  position: relative;
+}
+
+.site-header::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: radial-gradient(circle, #e1bdc7 20px, transparent 21px);
+  background-size: 40px 40px;
+  z-index: -1;
 }
 
 .header-content {
@@ -625,7 +646,7 @@ hr.divider {
 }
 
 summary::after {
-  content: " ✿";
+  content: "✿";
   color: #e1bdc7;
   font-family: "system-ui";
   font-weight: 400;
@@ -664,10 +685,18 @@ summary {
   display: grid;
   grid-template-columns: inherit;
   background-color: #e1bdc7;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 20' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q20,1 40,20 Z' fill='%23f7f7f7'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-position: bottom;
-  background-size: 50px 20px;
+  position: relative;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: radial-gradient(circle, #e1bdc7 20px, transparent 21px);
+  background-size: 40px 40px;
 }
 
 .footer-content {
@@ -724,13 +753,6 @@ summary {
 /* ==========================================
    13. ANIMATIONER & UTILITIES
    ========================================== */
-.fade-in {
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-duration: 2.5s;
-}
-
 @keyframes fadeInOpacity {
   0% {
     opacity: 0;
@@ -738,4 +760,312 @@ summary {
   100% {
     opacity: 1;
   }
+}
+
+@keyframes info-boks {
+  from {
+    scale: 0.5;
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-duration: 2.5s;
+}
+
+.info-boks {
+  animation: info-boks 1s ease-out both;
+  animation-timeline: view();
+  animation-range: 0% 50%;
+}
+
+/* ==========================================
+   14. FORMULAR & OPSAMLING DESIGN
+   ========================================== */
+/*********** Formular ************/
+
+.h2-formular {
+  font-family: "Kavoon", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+  color: #cbcbb1;
+  text-shadow: #717c5c 1.5px 1.5px;
+}
+
+span {
+  font-family: elsieregular;
+  font-weight: 500;
+}
+
+fieldset {
+  display: grid;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 15px;
+  border: 1px solid #97596e;
+}
+legend {
+  color: #97596e;
+  font-size: 1.2rem;
+}
+
+.range_tekst {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  font-family: elsieregular;
+  font-size: 1rem;
+  padding-block: 2rem;
+  color: #97596e;
+}
+
+input {
+  border: 1px solid #97596e;
+  border-radius: 18px;
+  padding: 5px 10px;
+  box-shadow: 3px solid #e1bdc7;
+}
+
+.form-placeholder {
+  background-color: #faede5;
+}
+
+form {
+  accent-color: #717c5c;
+  padding: 5px;
+  border-radius: 15px;
+  @media (width > 800px) {
+    max-width: 50%;
+    float: right;
+  }
+}
+
+.form-group {
+  display: grid;
+  gap: 1px;
+  padding-bottom: 15px;
+  font-family: elsieblack;
+  font-size: 1.5rem;
+}
+/* slettes */
+button {
+  background: #cbcbb1;
+  color: #97596e;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-family: "Kavoon", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:focus-visible {
+  /* Focus states */
+  outline: 3px solid #717c5c;
+  outline-offset: 1px;
+}
+button:hover {
+  /* Hover states */
+  background: #717c5c;
+}
+button:active {
+  /* Pressed states */
+  background-color: #97596e;
+}
+
+.error-message {
+  color: #97596e;
+}
+
+label:has(input:is([type="radio"], [type="checkbox"])) {
+  display: flex;
+  align-items: center;
+}
+
+.blomst-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  font-family: sans-serif;
+}
+
+/* Skjul standardboksen */
+.blomst-checkbox input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Blomstens udseende før klik */
+.blomst-ikon {
+  font-size: 24px;
+  color: #e1bdc7;
+  line-height: 1;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Blomstens udseende når boksen er valgt (:checked) */
+.blomst-checkbox input:checked + .blomst-ikon {
+  color: #97596e; /* Lyserød/magenta farve */
+  transform: rotate(72deg) scale(1.15);
+}
+
+/* Fokus-ramme ved brug af tastatur (Tab) */
+.blomst-checkbox input:focus-visible + .blomst-ikon {
+  outline: 10px solid #717c5c;
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+
+/************** Opsamling **************/
+/*** Styret af Javascript***/
+
+/* Farver på blomsterfrimærket */
+.blomster-frimaerke[data-color="rosa"] {
+  background-color: #e0a8b8;
+}
+
+.blomster-frimaerke[data-color="gul"] {
+  background-color: #faea8f;
+}
+
+.blomster-frimaerke[data-color="lilla"] {
+  background-color: #d8bfee;
+}
+
+.blomster-frimaerke[data-color="hvid"] {
+  background-color: #fefefe;
+}
+
+.blomster-frimaerke[data-color="rod"] {
+  background-color: #d04171;
+}
+
+.blomster-frimaerke[data-color="gron"] {
+  background-color: #a0b972;
+}
+
+.blomster-frimaerke[data-color="orange"] {
+  background-color: #e5a66a;
+}
+
+/*** Opsamlingsside design ***/
+/* Blomsterfrimærke */
+.blomster-frimaerke {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* Blomsterbillede */
+.resultat-billede {
+  width: 250px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Blomstens navn*/
+.resultat-navn {
+  font-family: elsieregular;
+  font-size: 42px;
+  margin: 15px 0;
+}
+
+.bruger-navn {
+  font-size: 40px;
+}
+
+/* Blomstens beskrivelse */
+.resultat-beskrivelse {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Lille overskrift på frimærket */
+.resultat-intro {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+/* Ydre baggrund på blomsterresultatet */
+.blomster-frimaerke {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 45px;
+  text-align: center;
+}
+
+/* Frimærke farve */
+.frimaerke-indhold {
+  background-color: #faede5;
+  padding: 45px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.frimaerke-indhold::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  background: radial-gradient(circle, #faede5 14px, transparent 15px);
+  background-size: 28px 28px;
+  z-index: 10;
+}
+
+.frimaerke-indhold::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  width: calc(100% + 10px);
+  height: 28px;
+  background: radial-gradient(circle, #faede5 14px, transparent 15px);
+  background-size: 28px 28px;
+  z-index: 10;
+}
+
+.frimaerke-venstre {
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 28px;
+  height: calc(100% + 23px);
+  background: radial-gradient(circle, #faede5 14px, transparent 15px);
+  background-size: 28px 28px;
+  background-position: center top;
+  z-index: 1;
+}
+
+.frimaerke-hojre {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 28px;
+  height: calc(100% + 23px);
+  background: radial-gradient(circle, #faede5 14px, transparent 15px);
+  background-size: 28px 28px;
+  background-position: center top;
+  z-index: 1;
 }
