@@ -3,7 +3,7 @@
    ========================================== */
 farver {
   color: #faede5;
-  color: #e7dfee;
+  color: #4c543e;
   color: #cbcbb1;
   color: #e1bdc7;
   color: #97596e;
@@ -71,24 +71,56 @@ body {
 /* ==========================================
    3. TYPOGRAFI & MAIN LAYOUT
    ========================================== */
-h1,
-h2,
 h3,
 h4,
 p {
   margin: 0;
 }
-h1,
-h2,
 h3,
 h4 {
-  font-family: "elsie-black";
+  font-family: "elsieblack";
   font-size: 1.5rem;
   margin-top: 1rem;
 }
 
+h1 {
+  font-family: "elsieblack";
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  color: #4c543e;
+}
+
+h2 {
+  font-family: "elsieblack";
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #97596e;
+}
+
+h3 {
+  font-family: "elsieblack";
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #4c543e;
+}
+
+h4 {
+  font-family: "elsieblack";
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #4c543e;
+}
+
 p {
   font-family: "elsieregular";
+  color: #4c543e;
+}
+
+summary {
+  font-family: "elsieblack";
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: #4c543e;
 }
 
 main {
@@ -101,6 +133,10 @@ main {
 main > * {
   grid-column: 2;
   padding-block: var(--space-3);
+}
+
+.info-boks-layout {
+  color: #faede5;
 }
 
 /* ==========================================
@@ -155,10 +191,10 @@ main > * {
 
 .site-nav button {
   padding: 0.4rem 0.7rem;
-  font-family: "elsie-black";
+  font-family: "elsieblack";
   font-size: 1.3rem;
   border: none;
-  text-shadow: #97596e 2px 2px;
+  text-shadow: #97596e 2px;
   @media (width > 600px) {
     display: none !important;
   }
@@ -429,7 +465,7 @@ main > * {
 }
 
 .grid_04 {
-  background: inherit;
+  background: #cbcbb1;
   height: max-content;
   margin-top: -5.5rem;
   border-radius: 6px;
@@ -450,7 +486,7 @@ main > * {
   background: #97596e;
   color: #faede5;
   text-decoration: none;
-  font-family: "elsie-black";
+  font-family: "elsieblack";
   font-weight: bolder;
   border-radius: 5px;
   border: 0;
@@ -498,13 +534,14 @@ main > * {
 
   p {
     max-width: 65ch;
-    color: var(--color-text);
+    color: #4c543e;
   }
 }
 
+/* Ved ikke hvad denne bruges til
 ::backdrop {
-  background: #0001;
-}
+  background: #222;
+} */
 
 @starting-style {
   [popover]:popover-open {
@@ -546,8 +583,8 @@ hr.divider {
    ========================================== */
 .panel,
 .form-placeholder {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: #cbcbb1;
+  border: 1px solid #717c5c;
 }
 
 .panel {
@@ -616,7 +653,7 @@ hr.divider {
 .accordion {
   display: grid;
   gap: 0.1rem;
-  font-family: "elsie-black";
+  font-family: "elsieblack";
   font-size: 1.5rem;
   margin-inline: 1rem;
   margin-block: 1rem;
@@ -627,27 +664,26 @@ hr.divider {
 }
 
 .accordion-item {
-  background: var(--color-surface);
   padding-inline: 1rem;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: #cbcbb1;
   transition: background-color 0.4s ease;
-  border: 1px solid #e1bdc7;
+  border: 1px solid #717c5c;
 }
 
 .accordion-item p {
   padding: 0 var(--space-1) var(--space-1);
-  color: var(--color-text);
+  color: #e1bdc7;
 }
 
 .accordion-item[open] {
-  background-color: #e1bdc7;
+  background-color: #717c5c;
   border: 1px solid #97596e;
 }
 
 summary::after {
   content: "✿";
-  color: #e1bdc7;
+  color: #97596e;
   font-family: "system-ui";
   font-weight: 400;
   font-size: 1.5rem;
@@ -656,7 +692,7 @@ summary::after {
 
 :open summary::after {
   content: "❀";
-  color: #97596e;
+  color: #e1bdc7;
 }
 
 ::details-content {
@@ -718,7 +754,7 @@ summary {
   }
 
   .bold {
-    font-family: "elsie-black";
+    font-family: "elsieblack";
   }
 
   .grid_logo {
@@ -799,6 +835,7 @@ summary {
 span {
   font-family: elsieregular;
   font-weight: 500;
+  color: #4c543e;
 }
 
 fieldset {
@@ -850,6 +887,7 @@ form {
   padding-bottom: 15px;
   font-family: elsieblack;
   font-size: 1.5rem;
+  color: #4c543e;
 }
 /* slettes */
 button {
