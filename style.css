@@ -655,7 +655,7 @@ summary::after {
 
 :open summary::after {
   content: "❀";
-  color: #717c5c;
+  color: #97596e;
 }
 
 ::details-content {
